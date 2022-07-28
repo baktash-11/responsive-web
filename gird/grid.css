@@ -1,0 +1,39 @@
+html{
+    box-sizing: border-box;
+}
+*,*::after,*::before{
+    box-sizing: inherit;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: linear-gradient(to left, #acc, #caa);
+    width: 80%;
+    margin: 0 auto;
+    
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 300px 400px;
+    grid-template-rows: 120px 100px 130px;
+    /* grid-template-columns: repeat(3, 3fr) */
+    
+}
+/* grid-template-column: Defiles the columns of the grid */
+/* grid-template-rows: Defines the rows of the grid */
+/* 
+two type of column and rows (explicit and implicit ) 
+Explicit and tracks that were created with css
+Implicit tracks lines and tracks that were automatically created by the browswer for leftover gird items
+*/
+.item{
+    background-color: #aad;
+    padding:.5em;
+    border: 1px solid #eee;
+    text-align: center;
+    font-size: 1.3rem;
+}
