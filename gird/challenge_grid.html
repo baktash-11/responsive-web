@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHALLENGE</title>
+
+    <style>
+        html{
+            box-sizing: border-box;
+        }
+        h2{
+            color: white;
+        }
+        body{
+           
+            background-color: tan;
+        }
+        .challenge-item{
+            /* border: 1px solid #000; */
+            padding: 15px;
+            box-shadow: 2px 3px 5px #777;
+        }
+
+
+        .challenge{
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            grid-gap: 5px;
+            height: 90vh;
+            width: 90vh;
+            
+           
+        }
+        .red{
+            background-color: red;
+            grid-column: 2 / 6;
+        }
+        .orange{
+            background-color: orange;
+            grid-column-start: 1;
+            grid-row: 2/6;
+        }
+        .yellow{
+            background-color: yellow;
+            grid-column: 2/4;
+            grid-row: 2/5;
+        }
+        .green{
+            background-color: green;
+            grid-column: 4/span 2;
+            grid-row: 2;
+            
+        }
+        .blue{
+            background-color: blue;
+            grid-column: 2/6;
+        }
+        .purple{
+            background-color: purple;
+            grid-column-start: 6;
+            grid-row: 1 / 6;
+        }
+        .gray{
+            background-color: gray;
+            grid-column: 4/6;
+            grid-row: 3/5;
+        }
+        .white{
+            background-color: white;
+            grid-row-start: 1;
+            grid-column-start: 1;
+        }
+
+       
+    </style>
+</head>
+<body>
+
+    <div class="challenge">
+        <div class="challenge-item red"></div>
+        <div class="challenge-item orange"></div>
+        <div class="challenge-item yellow"></div>
+        <div class="challenge-item green"></div>
+        <div class="challenge-item blue"></div>
+        <div class="challenge-item purple"></div>
+        <div class="challenge-item gray"></div>
+        <div class="challenge-item white"></div>
+    </div>
+    <h2>using grid-column, gird-row, grid-column-start and grid-row-start</h2>
+    <style>
+        .red2 {grid-area: red2; background-color: red;}
+        .orange2{ grid-area: orange2; background-color: orange;}
+        .yellow2{grid-area: yellow2; background-color: yellow;}
+        .green2{grid-area: green2; background-color: green;}
+        .blue2{grid-area: blue2; background-color: blue;}
+        .purple2{grid-area: purple2;background-color: purple;}
+        .gray2{grid-area: gray2;background-color: gray;}
+        .white2{grid-area: white2;background-color: white;}
+
+        @media (max-width: 750px) {
+            
+            .red2, .blue2, .white2, 
+            .gray2, .green2, .orange2, 
+            .purple2, .yellow2 
+            {   height: 10vh;
+                margin: 5px;
+            }
+
+            .challenge2{
+                margin: auto;
+                /* background-color: #cada7a; */
+                width: 90%;
+                
+            }
+            h2{
+                font-size: medium;
+                text-align: center;
+            }
+        }
+        @media (max-width: 300px) {
+            
+            .red2, .blue2, .white2, 
+            .gray2, .green2, .orange2, 
+            .purple2, .yellow2 
+            {   height: 15vh;
+                margin: 10px 0;
+                background-color: wheat;
+            }
+
+          h2{
+              font-size: 20px;
+              color: green;
+              text-align: center;
+              margin-left: auto;
+          }
+          .challenge2{
+              margin: 0;
+              width: 100%;
+          }
+            
+        }
+        @media (min-width:750px) {
+            
+            .challenge2{
+                display: grid;
+                grid-template-areas: 'white2 red2 red2 red2 red2 red2'
+                'orange2 gray2 gray2 yellow2 yellow2 purple2'
+                'orange2 gray2 gray2 yellow2 yellow2 purple2'
+                'orange2 gray2 gray2 green2 green2 purple2'
+                'orange2 gray2 gray2 green2 green2 purple2'
+                'orange2 blue2 blue2 blue2 blue2 blue2'
+                ;
+                
+                
+                height: 90vh;
+                width: 90vh;
+                box-shadow: 2px 3px 5px #777;
+                grid-gap: 5px;
+            }
+        }
+
+        
+       
+    </style>
+
+    <div class="challenge2">
+        <div class="challenge-item red2"></div>
+        <div class="challenge-item orange2"></div>
+        <div class="challenge-item yellow2"></div>
+        <div class="challenge-item green2"></div>
+        <div class="challenge-item blue2"></div>
+        <div class="challenge-item purple2"></div>
+        <div class="challenge-item gray2"></div>
+        <div class="challenge-item white2"></div>
+    </div>
+    <h2>Using grid area and grid area name</h2><br>
+</body>
+</html>

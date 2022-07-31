@@ -1,0 +1,81 @@
+
+
+/*
+ Grid Alignment 
+justify-content
+   1 start                   default 
+   2 end
+   3 center 
+   4 space-around
+   5 space-between  
+   6 space-evenly 
+
+*/
+html{
+    box-sizing: border-box;
+}
+*,*::after, *::before{
+    box-sizing: inherit;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #eee;
+    max-width: 80%;
+    margin: 0 auto;
+    color: #555;;
+
+}
+
+.container{
+    box-shadow: 1px 3px 5px #888;
+    padding: 20px;
+}
+.item{
+    background-color: #ec62de88;
+    text-align: center;
+    /* border: 1px solid #aff; */
+    padding:10px;
+    color: #ffa;
+    border-radius: 5px;
+
+}
+.container{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
+}
+
+.container-2{
+    box-shadow: 1px 3px 5px #888;
+    padding: 20px;
+}
+
+.container-2{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-around;
+}
+
+.container-3{
+    box-shadow: 1px 3px 5px #888;
+    padding: 20px;
+    /* grid */
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-evenly;
+}
+.container-4{
+    box-shadow: 1px 3px 5px #888;
+    padding: 20px;
+    /* grid */
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-between;
+}

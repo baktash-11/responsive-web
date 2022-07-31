@@ -16,24 +16,130 @@ body{
     
 }
 
-.container{
-    display: grid;
-    grid-template-columns: 300px 400px;
-    grid-template-rows: 120px 100px 130px;
-    /* grid-template-columns: repeat(3, 3fr) */
-    
-}
 /* grid-template-column: Defiles the columns of the grid */
 /* grid-template-rows: Defines the rows of the grid */
+/* grid-gap: Shourthand for grid-row-gap and grid-column-gap */
+/* grid-row-gap: Sets the size of the grid lines (the space between rows) */
+/* grid-column-gap: Sets the size of the grid lines (the space between columns) */
 /* 
 two type of column and rows (explicit and implicit ) 
 Explicit and tracks that were created with css
 Implicit tracks lines and tracks that were automatically created by the browswer for leftover gird items
+
 */
+
+.container{
+    display: grid;
+    grid-template-columns: 300px 400px auto;
+    grid-template-rows: 60px 50px 70px;
+    grid-gap: 10px 20px;
+    /* grid-template-columns: repeat(3, 3fr) */
+    margin: 3%;
+    /* adding auto-flow */
+    grid-auto-flow: dense;
+}
+
+/* placing grid item */
+/* grid-column-start: Sets the horizontal starting location of a grid */
+/* grid-column-end: Sets the horizontal ending location of a grid */
+/* grid-row-start can do the same with rows*/
+.item4{
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+.item12{
+    grid-column: 2/4;
+}
+.item7{
+    grid-column: 2 / span 3;
+    grid-row: 3 / span 2;
+}
+.container-2{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: auto 100px auto;
+}
+/* grid-area: Shortcut for grid-row-start, grid- column-start, grid-row-end and grid-column-end */
+.item4-2{
+    grid-area: 3/2/1/4;
+}
+
+/* Sizing Rows and Columns */
+/* grid-template-columns: auto auto auto */
+/* some column can be auto and others could be fixex */
+
+.container-3{
+    display: grid;
+    /* 12 column grid layout */
+    grid-template-columns: 2fr 8fr 2fr;
+    grid-template-rows: 1fr 2fr 4fr;
+    grid-gap: 10px;
+}
+/* fr:  a unit of measurement based on a fraction of the unused in the grid container*/
+
 .item{
     background-color: #aad;
-    padding:.5em;
+    
     border: 1px solid #eee;
     text-align: center;
     font-size: 1.3rem;
+    padding: 5px;
 }
+
+/*
+ Grid Alignment 
+justify-content
+   1 start                   default 
+   2 end
+   3 center 
+   4 space-around
+   5 space-between  
+   6 space-evenly 
+
+*/
+
+/* 
+align-content
+    1 start                 default
+    2 end
+    3 center
+    4 space-around
+    5 space-between
+    6 space-evenly
+*/
+
+/* 
+justify-items
+    1 start 
+    2 end
+    3 center 
+    4 stretch           default
+
+*/
+
+/* 
+align-items
+    1 start 
+    2 end
+    3 center
+    4 stretch           defualt
+
+*/
+
+/* 
+justify-self
+    1 start
+    2 end
+    3 center 
+    4 stretch           default
+
+*/
+
+/* 
+aling-self
+    1 start 
+    2 end 
+    3 center 
+    4 stretch           default 
+
+*/
