@@ -1,0 +1,79 @@
+html{
+    box-sizing: border-box;
+
+}
+*,*::after, *::before{
+    box-sizing: inherit;
+}
+
+body{
+    padding: 0;
+    margin: 0 auto;
+    width: 80%;
+    background-color: khaki;
+   
+}
+.item{
+    background-color: #fff;
+    border: 1px solid green;
+    padding:10px;
+    margin: 0 3px;
+    /* width: 300px; */
+}
+.container{
+    min-height: 90vh;
+    /* width: 90vh; */
+    border: 1px solid #000;
+
+    /* display to flex */
+    display: flex;
+
+    /* flex direction */
+    /* row/ column/ column-reversed/row-reversed */
+    /* flex-direction:column ; */
+ 
+    /* determine whether items stay on one line */
+    /* nowrap default/ wrap/ wrap-reversed */
+    /* flex-wrap: nowrap; */
+
+
+    /* flex-flow */
+    /* flex-wrap and flex-direction can be replaced by flex-flow  */
+    /* flex-flow: column-reverse wrap-reverse; */
+
+    /* justify-content: disterbutes the flex itmes along the main axis */
+    /* justify-content:space-around; */
+    /* align-items: diserbutes the flex items along the cros axis */
+    /* align-items: center;  */
+
+    
+}
+/* order  specifies the order in which flex items laid out*/
+.item2{
+    background-color: #cab;
+    color: #fff;
+    order: 3;
+    align-self: flex-start;
+
+}
+.item3{
+    order: -2;
+    background-color: #bcd;
+    align-self: flex-end ;
+    /* flex-grow: items will grow if there is spaces */
+    flex-grow: 2;
+    /* flex-shrink: items will shirnk if space is needed */
+    flex-shrink: 3;
+}
+
+.item5{
+    order:-1;
+    background-color: #53abc3;
+    color: #fff;
+    /* flex: shrthand for flex-grow, flex-srhink and flex-basis */
+    flex: 2 4 300px;
+}
+.item{
+    /* flex basis will affect if there is space  */
+    flex-basis: 200px;
+}

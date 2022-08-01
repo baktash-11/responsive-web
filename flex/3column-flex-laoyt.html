@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* base style */
+        
+        .column, nav, footer{
+            border: 1px solid #333;
+            margin:5px 5px;
+            padding:10px;
+            
+           
+            /* color: #fff; */
+            text-align: center;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>three column layout with flexbox</title>
+
+    <style>
+        /* layout style */
+       @media (min-width:600px) {
+        .container{
+            display: flex;
+            height: 40vh;
+        }
+        .main{
+            order: 2;
+            flex-grow: 3;
+            
+        }
+        .ads{
+            order: 1;
+            flex-grow: 1;
+            width: 20vh;
+            
+        }
+        .related{
+            order: 3;
+            flex-grow: 1;
+        }
+       }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+
+        <nav>Navbar</nav>
+        <div class="container">
+            <div class="column related">Related Links</div>
+            <div class="column main">Main contents</div>
+            <div class="column ads">Ads</div>
+        </div>
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>
