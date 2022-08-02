@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* base style */
+        html{
+            box-sizing: border-box;
+        }
+        *, *::before, *::after{
+            box-sizing: inherit;
+        }
+        body{
+            width: 90%;
+            margin: 0 auto;
+            padding:0;
+            background-color: #eee;
+        }
+
+        .container > *{
+            border: 2px solid #040;
+            padding:10px;
+        }
+        nav ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12 column grid layout</title>
+
+    <!-- layout style -->
+    <style>
+        .container{
+            display: grid;
+            grid-gap: 10px;
+            grid-template-areas: 'header' 'nav' 'content' 'links' 'ads' 'footer';
+        }
+
+        .header{
+            grid-area: header;
+        }
+        .nav{
+            grid-area: nav;
+
+        }
+        .content{
+            grid-area: content;
+        }
+        .links{
+            grid-area: links;
+        }
+
+        .ads{
+            grid-area: ads;
+        }
+        .footer{
+            grid-area: footer;
+        }
+
+        @media (min-width:600px) {
+            .container{
+                grid-template-columns: repeat(12, 1fr);
+                grid-template-areas: "header header header header header header header header header header header header"
+                                    "nav nav nav nav nav nav nav nav nav nav nav nav"
+                                    "links links links  content content content content content content content content content"
+                                    "ads ads ads  content content content content content content content content content"
+                                    "footer footer footer footer footer footer footer footer footer footer footer footer"
+                ;
+            }
+            .nav ul{
+                display: flex;
+                justify-content: space-between;
+    
+            }
+        }
+
+        @media (min-width:900px) {
+            .container{
+                grid-template-columns: repeat(12, 1fr);
+                grid-template-areas: "header header header header header header header header header header header header"
+                                    "nav nav nav nav nav nav nav nav nav nav nav nav"
+                                    "links links links  content content content content content content content ads ads"
+                                    
+                                    "links links links  footer footer footer footer footer footer footer footer footer"
+                ;
+            }
+            .nav ul{
+                display: flex;
+                justify-content: space-between;
+    
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">Header</header>
+        <nav class="nav">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+        </nav>
+        <article class="content">
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, esse incidunt. Dolor adipisci explicabo cum voluptates unde ducimus hic maiores fugiat tempora, pariatur, nemo quidem cumque incidunt porro necessitatibus. Labore porro nulla dolorem blanditiis, saepe aspernatur fugiat, nam libero eos consequuntur voluptatibus totam, sed expedita doloribus repudiandae ea suscipit commodi. Necessitatibus veniam similique eum vero, perspiciatis fugit quo doloribus reprehenderit obcaecati, omnis velit voluptatibus dolorum dolore asperiores corporis sapiente id debitis quis non rerum consequuntur inventore? Reiciendis deserunt quasi debitis?</p>
+        </article>
+        <aside class="links">Links</aside>
+        <aside class="ads">ads</aside>
+        <footer class="footer">Footer</footer>
+    </div>
+    
+</body>
+</html>
