@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        html{
+            box-sizing: border-box;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        *,*::before, *::after{
+            box-sizing: inherit;
+        }
+        .container{
+            margin: 30px;
+            
+            padding:10px;
+            height: 90vh;
+        }
+        .container > *{
+            
+            /* border: 2px solid green; */
+            background-color: #ffec99;
+            padding: 10px;
+            box-shadow: 2px 2px 3px #ccc;
+            color: #050;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid's column layout!</title>
+
+    <style>
+        /* layout */
+
+        .container{
+            display: grid;
+            grid-gap: 10px;
+            grid-template-areas: 
+                'header' 'content''related' 'ads' 'footer';
+            ;
+            
+
+            
+        }
+        .header{
+                grid-area: header;
+            }
+            .main-content{
+                grid-area: content;
+            }
+            .related-link{
+                grid-area: related;
+            }
+
+            .ads{
+                grid-area: ads;
+            }
+            .footer{
+                grid-area: footer;
+                
+            }
+        @media (min-width:600px) {
+            .container{
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-areas: 'header header header'
+                                    "content content related" 
+                                    "content content ads" 
+                                    "footer footer footer";
+                                
+            }
+            
+
+            
+        }
+
+        @media (min-width: 900px) {
+            .container{
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-areas: 'header header header header'
+                                    "ads content content related" 
+                                    "ads content content related" 
+                                    "footer footer footer footer";
+                                
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header"> Header </header>
+            <article class="main-content">
+                main-content
+            </article>
+            <aside class="related-link">
+                Related
+            </aside>
+            <aside class="ads">
+                Ads
+            </aside>
+            <footer class="footer">
+                Footer
+            </footer>
+        
+    </div>
+</body>
+</html>
