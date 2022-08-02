@@ -13,16 +13,91 @@
         body{
             max-width: 85%;
             margin: 0 auto;
+            background-color: #eee;
+        }
+        .basic-input{
+            box-shadow: 1px 3px 3px #aaa;
+            display: inline-block;
+            padding:30px;
+        }
+        form > *{
+            margin: 10px 0;
         }
     </style>
 </head>
 <body>
     <h1>About You!</h1>
-    <form action="" method="post" id="questions">
-        <label for="fav-color">What is your Favorite Color</label>
-        <input type="text" name="favcolor" id="fav-color" placeholder="your favorite color" required>
-        <input type="submit" value="Submit">
 
-    </form>
+    <div class="basic-input">
+
+        <form action="" method="post" id="text">
+            <h3>Text input </h3>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Your Name" required><br>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="urID@gmail.com" multiple required><br>
+            <label for="website">Web-url</label>
+            <input type="url" name="url" id="url"> <br>
+            <input type="submit" value="Submit">
+    
+        </form>
+    </div>
+    <div class="basic-input">
+        <h3>Number types</h3>
+        <form action="" method="post" id="numbers">
+            <label for="number">Number</label>
+            <input type="number" name="number" id="number" required min="0" max="130" step="a"><br>
+            <label for="birthday">Birthday</label>
+            <input type="date" name="birthday" id="birthday" min="2018-01-01" max="2030-01-01"><br>
+            <label for="time">Time</label>
+            <input type="time" name="time" id="time"><br>
+            <label for="tel">Phone</label>
+            <input type="tel" name="tel" id="tel"><br> 
+            <input type="submit" value="submit">
+        </form>
+    </div>
+
+    <div class="basic-input">
+        <h3>Radio buttons and Checkboxes</h3>
+        <form action="post" method="" id="radio">
+            <fieldset>
+                <legend>What is your favorite color?</legend>
+                <label for="blue">Blue</label>
+                <input type="radio" name="favcolor" id="blue" value="blue"><br>
+                <label for="blue">Red</label>
+                <input type="radio" name="favcolor" id="red" value="red"><br>
+                <label for="green">Green</label>
+                <input type="radio" name="favcolor" id="green" value="green" checked><br>
+            </fieldset>
+            <fieldset>
+                <legend>What is your favorite color?</legend>
+                <label for="blue">Blue</label>
+                <input type="checkbox" name="favcolor" id="blue" value="blue"><br>
+                <label for="blue">Red</label>
+                <input type="checkbox" name="favcolor" id="red" value="red"><br>
+                <label for="green">Green</label>
+                <input type="checkbox" name="favcolor" id="green" value="green" checked><br>
+
+            </fieldset>
+            <label for="pizza">Your favorite pizza's topping</label>
+            <!-- <select name="pizza" id="pizza" multiple size="9"> -->
+            <select name="pizza" id="pizza" >
+                <OPTGroup label="vagies">
+
+                    <option value="mashroom">Mashrooms</option>
+                    <option value="onions">Onions</option>
+                    <option value="green-peeper">Green Peeper</option>
+                </OPTGroup>
+                <optgroup label="meats">
+
+                    <option value="chicken">Chicken</option>
+                    <option value="pep">Pepproni</option>
+                </optgroup>
+            </select><br>
+
+
+            <input type="submit" value="submit">
+        </form>
+    </div>
 </body>
 </html>
