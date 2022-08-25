@@ -23,6 +23,10 @@
         form > *{
             margin: 10px 0;
         }
+
+        input:invalid{
+            border: 2px dashed #fa9;
+        }
     </style>
 </head>
 <body>
@@ -94,9 +98,12 @@
                     <option value="pep">Pepproni</option>
                 </optgroup>
             </select><br>
-
-
+            
+            
             <input type="submit" value="submit">
+            <input type="reset" value="reset">
+            <input type="button" value="Button">
+            <button type="submit">submit</button>
         </form>
     </div>
 </body>

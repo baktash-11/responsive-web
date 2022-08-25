@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        *::before, *::after{
+            box-sizing: border-box;
+            
+        }
+        body{
+            padding: 0;
+            margin: 0;
+            font-family:Arial, Helvetica, sans-serif;
+
+        }
+        .full-page-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-image: url('./1363250.jpg');
+            height: 100vh;
+            width: 100vw;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .welcome-text{
+            margin-top: 0;
+            color: wheat;
+            font-weight: lighter;
+            font-size: 2rem;
+        }
+        .inputs-container{
+            display: flex;
+           
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-direction: column;
+
+            background-color: hsl(130, 50%, 9%, .8);
+            border-radius: 20px;
+            width: 80%;
+            max-width: 600px;
+            padding: 40px 30px;
+            box-shadow: 0 0 10px 0 hsl(140, 100%, 20%, .5);;
+        }
+
+        .input-container{
+            display: flex;
+            flex-direction: column;
+            gap:1em;
+        }
+
+        .error-message{
+            display: none;
+        }
+
+        .input-container input{
+            width: 500px;
+            height: 30px;
+            border: none;
+            border-radius: 5px;
+            background-color: hsl(150, 100%, 50%, .5);
+            outline: none;
+            box-shadow: 0 0 4px hsl(150, 100%, 50%);
+            color: wheat;
+            
+        }
+        .input-container label{
+            font-weight: lighter;
+            color: wheat;
+        }
+        
+        .input-container input:focus{
+            transition: 1s;
+            color: white;
+            box-shadow: none;
+           
+            
+        }
+
+        .submit{
+            transition: 1s;
+            height: 50px;
+            font-size: 1.1rem;
+            font-weight: lighter;
+            text-transform: uppercase;
+
+            border: none;
+            background-color: hsl(150, 100%, 50%, .5);
+            color: wheat;
+            border-radius: 5px;
+            margin-top: 50px;
+            width: 500px;
+            cursor: pointer;
+            outline: none;
+
+        }
+        .submit:hover, .submit:focus{
+            transition: 1s;
+            font-size: 1.25rem;
+            background-color: hsl(140, 100%, 20%, .5);
+            box-shadow: 0 0 5px 0 hsl(150, 100%, 50%);
+            color: white;
+            
+        }
+
+        
+    </style>
+
+
+    <title>Login </title>
+</head>
+<body>
+    <div class="full-page-container">
+        <div class="inputs-container">
+            <h1 class="welcome-text">Welcome </h1>
+            <div class="input-container">
+                <label for="email">Email</label>
+                <input type="email" name="" id="email">
+                <span class="error-message">Incorrect Email address!</span>
+            </div>
+            <div class="input-container">
+                <label for="password">Pasword</label>
+                <input type="password" name="" id="password">
+                <span class="error-message">Incorrect password address!</span>
+            </div>
+            <input type="submit" value="Submit" class="submit" >
+        </div>
+    </div>
+    
+</body>
+</html>
