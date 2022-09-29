@@ -40,6 +40,8 @@ body{
     padding:10px;
     color: #ffa;
     border-radius: 5px;
+    min-width: 80px;
+    min-height: 80px;
 
 }
 .container{

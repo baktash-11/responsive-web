@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter2</title>
+
+    <style>
+        html{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2, h3, h4{
+            padding: 0;
+            margin: 0;
+            color: #474;
+            text-align: center;
+        }
+        .numOne{
+            max-width: 70%;
+            max-height: 50vh;
+            box-shadow: 2px 2px 4px #333;
+            margin: 0 auto;
+            padding:20px 20px;
+            margin-top: 20px;
+            
+        }
+        .contain1{
+            box-shadow: 2px 2px 4px #333;
+            background-color: #0d9;
+            position: relative;
+        }
+        .contain2{
+            box-shadow: 2px 2px 4px #333;
+            background-color: #dd9900;
+            position: relative;
+        }
+        .contain3{
+            box-shadow: 2px 2px 4px #333;
+            background-color: #99dd00;
+        }
+        .contain4{
+            box-shadow: 2px 2px 4px #333;
+            background-color: #9900dd;
+            position: relative;
+        }
+        .contain5{
+            box-shadow: 2px 2px 4px #333;
+            background-color: #dd0099;
+            position: relative;
+        }
+        .contain6{
+            box-shadow: 2px 2px 4px #333;
+            background-color: #0099dd;
+            position: relative;
+        }
+        .text{
+            position:relative;
+            line-height:45px;
+            text-align: center;
+            font-size: 40px;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            top:25%;
+            transform: translateY(-25%);
+
+        }
+        .numOne{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-gap: 10px;
+        }
+        .a{
+            grid-column: 2/2;
+            grid-row: 2/2;
+            background-color: #333;
+        }
+        
+    </style>
+</head>
+<body>
+    <container class="main">
+
+        <h2>#1 Specifying Everhting in Individual Properties!</h2>
+        <div class="numOne">
+            <div class="a contain1">
+                <p class="text">A</p>
+            </div>
+            <div class="b contain2">
+                <p class="text">B</p>
+            </div>
+            <div class="c contain3">
+                <p class="text">C</p>
+            </div>
+            <div class="d contain4">
+                <p class="text">D</p>
+            </div>
+            <div class="e contain5">
+                <p class="text">E</p>
+            </div>
+            <div class="f contain6">
+                <p class="text">F</p>
+            </div>
+        </div>
+        <style>
+            .numTwo{
+                max-width: 70%;
+                margin:0 auto;
+                padding-top: 20px;
+
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-gap: 10px;
+            }
+
+            .d2{
+                grid-column: 2/4;
+                grid-row: 2/4;
+                background-color: #333;
+            }
+        </style>
+        <br>
+        <h2>#2 Using grid-row and grid-column!</h2>
+        <div class="numTwo">
+            <div class="a2 contain1">
+                <p class="text">A</p>
+            </div>
+            <div class="b2 contain2">
+                <p class="text">B</p>
+            </div>
+            <div class="c2 contain3">
+                <p class="text">C</p>
+            </div>
+            <div class="d2 contain4">
+                <p class="text">D</p>
+            </div>
+            <div class="e2 contain5">
+                <p class="text">E</p>
+            </div>
+            <div class="f2 contain6">
+                <p class="text">F</p>
+            </div>
+        </div>
+        <br>
+        <style>
+            .numThree{
+                width: 70%;
+                margin: 0 auto;
+                padding:20px;
+                box-shadow: 2px 2px 4px #444;
+                height: 50vh;
+            }
+            .numThree{
+                display: grid;
+                gap: 10px;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                margin-top: 20px;
+
+
+            }
+            .e3{
+                background-color: #333;
+                grid-area: 1/2/3/4;
+            /* grid-area: row-start / col-start / row-end / col-end; */
+            }
+
+        </style>
+
+        <h2>#3 Using grid-area!</h2>
+        <div class="numThree">
+            <div class="a3 contain1">
+                <p class="text">A</p>
+            </div>
+            <div class="b3 contain2">
+                <p class="text">B</p>
+            </div>
+            <div class="c3 contain3">
+                <p class="text">C</p>
+            </div>
+            <div class="d3 contain4">
+                <p class="text">D</p>
+            </div>
+            <div class="e3 contain5">
+                <p class="text">E</p>
+            </div>
+            <div class="f3 contain6">
+                <p class="text">F</p>
+            </div>
+            <br>
+
+        </div>
+        <br>
+        <style>
+            .numFour{
+                width: 70%;
+                margin: 0 auto;
+                padding:20px;
+                box-shadow: 2px 2px 4px #444;
+                height: 50vh;
+            }
+            .numFour{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                gap: 10px;
+
+            }
+            .c4{
+                grid-row: 1/ span 2;
+                grid-column: 1/ span 2;
+                background-color: #333;
+            }
+        </style>
+        <h2>#4 Using the span Keyword</h2>
+        <br>
+        <div class="numFour">
+            <div class="a4 contain1">
+                <p class="text">A</p>
+            </div>
+            <div class="b4 contain2">
+                <p class="text">B</p>
+            </div>
+            <div class="c4 contain3">
+                <p class="text">C</p>
+            </div>
+            <div class="d4 contain4">
+                <p class="text">D</p>
+            </div>
+            <div class="e4 contain5">
+                <p class="text">E</p>
+            </div>
+            <div class="f4 contain6">
+                <p class="text">F</p>
+            </div>
+          
+        </div>
+        <br>
+        <style>
+            .numfive{
+                width: 70%;
+                margin: 0 auto;
+                padding:20px;
+                box-shadow: 2px 2px 4px #444;
+                height: 100vh;
+            }
+            .numfive{
+                display: grid;
+                gap: 16px;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+            }
+
+            .a5{
+                grid-row: 1;
+                grid-column: 1/ span 3;
+
+            }
+            .c5{
+                grid-row: 2/ span 2;
+                grid-column: 2/ span 2;
+            }
+            .d5{
+                grid-column: 1/ span 3;
+                grid-row: 4;
+            }
+
+        </style>
+        <div class="numfive">
+            <div class="a5 contain1">
+                <p class="text">Header</p>
+            </div>
+            <div class="b5 contain2">
+                <p class="text">Side Bar</p>
+            </div>
+            <div class="c5 contain3">
+                <p class="text">Content</p>
+            </div>
+            <div class="d5 contain4">
+                <p class="text">Footer</p>
+            </div>
+            
+            <div class="f5 contain6">
+                <p class="text">Advert</p>
+            </div>
+          
+        </div>
+        <br>
+        <h1>#6 Using Named Grid Areas</h1>
+        <br>
+        <style>
+            .numSix{
+                width: 70%;
+                margin: 0 auto;
+                padding:20px;
+                box-shadow: 2px 2px 4px #444;
+                height: 100vh;
+
+            }
+            .numSix{
+                display: grid;
+               
+                grid-template-columns: repeat(12, 1fr) ;
+                gap: 10px;
+                /* grid-template-rows: repeat(4, 1fr); */
+                grid-template-areas: 'header header header header header header header header header header header header' 
+                                      'content content content content content content content content content f f f'
+                                      'content content content content content content content content content x x x'
+                                      'footer footer footer footer footer footer footer footer footer footer footer footer';
+
+            }
+
+            .header{
+                grid-area: header;
+                
+            }
+            .content{
+                grid-area: content;
+            }
+            .advert{
+                grid-area: ad;
+            }
+            .footer{
+                grid-area: footer;
+            }
+            .msg{
+                grid-area: x;
+            }
+        </style>
+        <div class="numSix">
+            <div class="header contain1">
+                <p class="text">Header</p>
+            </div>
+            <!-- <div class="advert contain2">
+                <p class="text">Side Bar</p>
+            </div> -->
+            <div class="content contain3">
+                <p class="text">Content</p>
+            </div>
+            <div class="footer contain4">
+                <p class="text">Footer</p>
+            </div>
+            <div class="msg contain6">
+                <p class="text">Message</p>
+            </div>
+          
+        </div>
+        <br>
+
+    </container>
+</body>
+</html>
